@@ -1,47 +1,47 @@
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { VscArrowRight } from 'react-icons/vsc';
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { VscArrowRight } from "react-icons/vsc";
 
-import styles from '@/styles/HomePage.module.css';
+import styles from "@/styles/HomePage.module.css";
 
 export default function HomePage() {
   const [activeLineIndex, setActiveLineIndex] = useState(0);
 
   const codeLines = [
-    { code: 'const HomePage = () => {', type: 'function' },
+    { code: "const HomePage = () => {", type: "function" },
     {
-      code: '  const [isLoaded, setIsLoaded] = useState(true);',
-      type: 'variable',
+      code: "  const [isLoaded, setIsLoaded] = useState(true);",
+      type: "variable",
     },
-    { code: '  const developerInfo = {', type: 'variable' },
-    { code: "    name: 'Nitin Ranganath',", type: 'array-item' },
-    { code: "    role: 'Full Stack Developer',", type: 'array-item' },
-    { code: "    bio: 'Building modern web experiences'", type: 'array-item' },
-    { code: '  };', type: 'array-end' },
-    { code: '', type: 'blank' },
-    { code: '  useEffect(() => {', type: 'nested-function' },
+    { code: "  const developerInfo = {", type: "variable" },
+    { code: "    name: 'hasibul',", type: "array-item" },
+    { code: "    role: 'Full Stack Developer',", type: "array-item" },
+    { code: "    bio: 'Building modern web experiences'", type: "array-item" },
+    { code: "  };", type: "array-end" },
+    { code: "", type: "blank" },
+    { code: "  useEffect(() => {", type: "nested-function" },
     {
-      code: '    document.title = `${developerInfo.name} | Portfolio`;',
-      type: 'return',
+      code: "    document.title = `Md. Hasibul Islam Nayeem | Portfolio`;",
+      type: "return",
     },
-    { code: '    setIsLoaded(true);', type: 'function-call' },
-    { code: '  }, []);', type: 'close' },
-    { code: '', type: 'blank' },
-    { code: '  return (', type: 'return-object' },
-    { code: '    <main className="hero-container">', type: 'object-method' },
-    { code: '      <h1>{developerInfo.name}</h1>', type: 'object-method' },
-    { code: '      <p>{developerInfo.role}</p>', type: 'object-method' },
-    { code: '      <div className="cta">', type: 'object-method' },
+    { code: "    setIsLoaded(true);", type: "function-call" },
+    { code: "  }, []);", type: "close" },
+    { code: "", type: "blank" },
+    { code: "  return (", type: "return-object" },
+    { code: '    <main className="hero-container">', type: "object-method" },
+    { code: "      <h1>{developerInfo.name}</h1>", type: "object-method" },
+    { code: "      <p>{developerInfo.role}</p>", type: "object-method" },
+    { code: '      <div className="cta">', type: "object-method" },
     {
       code: '        <Link href="/projects">View Projects</Link>',
-      type: 'object-method',
+      type: "object-method",
     },
-    { code: '      </div>', type: 'object-method' },
-    { code: '    </main>', type: 'object-method' },
-    { code: '  );', type: 'close' },
-    { code: '};', type: 'close-function' },
-    { code: '', type: 'blank' },
-    { code: 'export default HomePage;', type: 'function-call' },
+    { code: "      </div>", type: "object-method" },
+    { code: "    </main>", type: "object-method" },
+    { code: "  );", type: "close" },
+    { code: "};", type: "close-function" },
+    { code: "", type: "blank" },
+    { code: "export default HomePage;", type: "function-call" },
   ];
 
   useEffect(() => {
@@ -63,7 +63,7 @@ export default function HomePage() {
                   <div
                     key={index}
                     className={`${styles.lineNumber} ${
-                      index === activeLineIndex ? styles.activeLine : ''
+                      index === activeLineIndex ? styles.activeLine : ""
                     }`}
                   >
                     {index + 1}
@@ -76,7 +76,7 @@ export default function HomePage() {
                   <div
                     key={index}
                     className={`${styles.codeLine} ${styles[line.type]} ${
-                      index === activeLineIndex ? styles.highlightedLine : ''
+                      index === activeLineIndex ? styles.highlightedLine : ""
                     }`}
                   >
                     {line.code}
@@ -91,7 +91,7 @@ export default function HomePage() {
 
         <div className={styles.infoSection}>
           <h1 className={styles.developerName}>
-            Nitin <span className={styles.accentText}>Ranganath</span>
+            Md. Hasibul Islam <span className={styles.accentText}>Nayeem</span>
           </h1>
 
           <div className={styles.developerRole}>Full Stack Web Developer</div>
@@ -112,16 +112,16 @@ export default function HomePage() {
       <div className={styles.decorElements}>
         <div className={styles.codeFlare}></div>
         <div className={styles.gridLines}></div>
-        <div className={styles.codeBlock1}>{'{'}</div>
-        <div className={styles.codeBlock2}>{'}'}</div>
-        <div className={styles.codeBlock3}>{'<>'}</div>
-        <div className={styles.codeBlock4}>{'/>'}</div>
+        <div className={styles.codeBlock1}>{"{"}</div>
+        <div className={styles.codeBlock2}>{"}"}</div>
+        <div className={styles.codeBlock3}>{"<>"}</div>
+        <div className={styles.codeBlock4}>{"/>"}</div>
         <div className={styles.orb1}></div>
         <div className={styles.orb2}></div>
         <div className={styles.orb3}></div>
-        <div className={styles.codeSymbol1}>{'()'}</div>
-        <div className={styles.codeSymbol2}>{'[]'}</div>
-        <div className={styles.codeSymbol3}>{'=>'}</div>
+        <div className={styles.codeSymbol1}>{"()"}</div>
+        <div className={styles.codeSymbol2}>{"[]"}</div>
+        <div className={styles.codeSymbol3}>{"=>"}</div>
         <div className={styles.dotPattern}></div>
         <div className={styles.mobileAccent}></div>
       </div>
@@ -131,6 +131,6 @@ export default function HomePage() {
 
 export async function getStaticProps() {
   return {
-    props: { title: 'Home' },
+    props: { title: "Home" },
   };
 }

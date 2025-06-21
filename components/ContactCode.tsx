@@ -1,40 +1,35 @@
-import styles from '@/styles/ContactCode.module.css';
+import styles from "@/styles/ContactCode.module.css";
 
 const contactItems = [
   {
-    social: 'website',
-    link: 'nitinranganath.com',
-    href: 'https://nitinranganath.com',
+    social: "website",
+    link: "hasibul.islam.1872@gmail.com",
+    href: "https://hasibul.islam.1872@gmail.com",
   },
   {
-    social: 'email',
-    link: 'nitinranganath@gmail.com',
-    href: 'mailto:nitinranganath@gmail.com',
+    social: "email",
+    link: "hasibul.islam.1872@gmail.com",
+    href: "mailto:hasibul.islam.1872@gmail.com",
   },
   {
-    social: 'github',
-    link: 'itsnitinr',
-    href: 'https://github.com/itsnitinr',
+    social: "phone",
+    link: "+8801845588514",
+    href: "tel:+8801845588514",
   },
   {
-    social: 'linkedin',
-    link: 'nitinranganath',
-    href: 'https://www.linkedin.com/in/nitinranganath/',
+    social: "whatsapp",
+    link: "+8801748326000",
+    href: "https://wa.me/8801748326000",
   },
   {
-    social: 'twitter',
-    link: 'iamnitinr',
-    href: 'https://www.twitter.com/iamnitinr',
+    social: "facebook",
+    link: "nayeem.islam.756",
+    href: "https://www.facebook.com/nayeem.islam.756",
   },
   {
-    social: 'telegram',
-    link: 'iamnitinr',
-    href: 'https://t.me/iamnitinr',
-  },
-  {
-    social: 'peerlist',
-    link: 'nitinranganath',
-    href: 'https://peerlist.io/nitinranganath',
+    social: "github",
+    link: "Nayeem1872",
+    href: "https://github.com/Nayeem1872",
   },
 ];
 
@@ -46,7 +41,7 @@ const ContactCode = () => {
       </p>
       {contactItems.map((item, index) => (
         <p className={styles.line} key={index}>
-          &nbsp;&nbsp;&nbsp;{item.social}:{' '}
+          &nbsp;&nbsp;&nbsp;{item.social}:{" "}
           <a href={item.href} target="_blank" rel="noopener">
             {item.link}
           </a>
